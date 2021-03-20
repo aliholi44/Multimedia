@@ -402,16 +402,42 @@ var levels = {
 			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
 			{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
 
-			{type:"block", name:"television", x:520,y:380,width:100,height:100},
-			{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"virus4",x:520,y:205,calories:590},
+			{type:"block", name:"glass", x:450,y:300,angle:90,width:80,height:20},
+			{type:"block", name:"glass", x:450,y:380,angle:90,width:80,height:20},	
+			{type:"block", name:"glass", x:450,y:220,angle:90,width:80,height:20},
 
-			{type:"block", name:"plant", x:620,y:380,angle:90,width:100,height:25},
-			{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"virus1", x:620,y:205,calories:420},				
+			{type:"block", name:"glass", x:665,y:170,width:500,height:20},						
+			{type:"villain", name:"virus2",x:450,y:160,calories:590},
 
-			{type:"hero", name:"mask",x:80,y:405},
+			{type:"block", name:"television", x:510,y:380,width:70,height:60},
+			{type:"villain", name:"virus3", x:510,y:380,calories:420},
+
+			{type:"block", name:"chimney", x:580,y:380,width:60,height:30},
+			{type:"villain", name:"virus1", x:580,y:380,calories:420},
+
+			{type:"block", name:"wardrobe", x:650,y:380,width:60,height:40},
+			{type:"block", name:"wardrobe", x:650,y:380,width:60,height:40},
+			{type:"block", name:"wardrobe", x:650,y:380,width:60,height:40},
+
+			{type:"block", name:"glass", x:715,y:300,angle:90,width:80,height:20},
+			{type:"block", name:"glass", x:715,y:380,angle:90,width:80,height:20},	
+			{type:"block", name:"glass", x:715,y:220,angle:90,width:80,height:20},
+
+			{type:"block", name:"fridge", x:785,y:380,width:50,height:100},
+			{type:"villain", name:"virus1", x:795,y:380,calories:420},
+
+			{type:"block", name:"washer", x:850,y:380,width:50,height:50},
+			{type:"villain", name:"virus1", x:850,y:380,calories:420},								
+			//{type:"villain", name:"virus1", x:620,y:205,calories:420},	
+			
+			{type:"block", name:"glass", x:890,y:300,angle:90,width:80,height:20},
+			{type:"block", name:"glass", x:890,y:380,angle:90,width:80,height:20},	
+			{type:"block", name:"glass", x:890,y:220,angle:90,width:80,height:20},								
+			{type:"villain", name:"virus2",x:890,y:160,calories:590},
+
+			{type:"hero", name:"hands",x:80,y:405},
 			{type:"hero", name:"vaccine",x:140,y:405},
+			{type:"hero", name:"mask",x:20,y:405},
 		]
 	 },
 		{   // Segundo nivel
@@ -501,7 +527,7 @@ var entities = {
 			restitution:0.15,
 		},
 		"wood":{
-			fullHealth:300,
+			fullHealth:200,
 			density:0.7,
 			friction:0.4,
 			restitution:0.4,
@@ -513,7 +539,7 @@ var entities = {
 			restitution:0.4,
 		},
 		"television":{
-			fullHealth:150,
+			fullHealth:100,
 			density:0.7,
 			friction:0.4,
 			restitution:0.4,
@@ -525,19 +551,19 @@ var entities = {
 			restitution:0.4,
 		},
 		"fridge":{
-			fullHealth:200,
-			density:0.7,
-			friction:0.4,
-			restitution:0.4,
-		},
-		"wardrobe":{
 			fullHealth:100,
 			density:0.7,
 			friction:0.4,
 			restitution:0.4,
 		},
+		"wardrobe":{
+			fullHealth:70,
+			density:0.7,
+			friction:0.4,
+			restitution:0.4,
+		},
 		"washer":{
-			fullHealth:200,
+			fullHealth:100,
 			density:0.7,
 			friction:0.4,
 			restitution:0.4,
@@ -577,8 +603,8 @@ var entities = {
 		},
 		"virus1":{
 			shape:"circle",
-			fullHealth:50,
-			radius:20,
+			fullHealth:40,
+			radius:15,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
@@ -586,31 +612,31 @@ var entities = {
 		"virus2":{
 			shape:"circle",
 			fullHealth:50,
-			radius:20,
+			radius:25,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"virus3":{
 			shape:"circle",
-			fullHealth:120,
-			radius:36,
+			fullHealth:60,
+			radius:25,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"virus4":{
 			shape:"circle",
-			fullHealth:120,
-			radius:36,
+			fullHealth:70,
+			radius:25,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"virus5":{
 			shape:"circle",
-			fullHealth:120,
-			radius:36,
+			fullHealth:80,
+			radius:25,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
