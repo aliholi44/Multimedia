@@ -438,24 +438,7 @@ var levels = {
 			{type:"hero", name:"vaccine",x:140,y:405},
 			{type:"hero", name:"mask",x:20,y:405},
 		]
-	},
-	{
-		foreground:'sueloR',
-		background:'emergencia',
-		entities:[
-			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
-			{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
-
-			{type:"block", name:"glass", x:450,y:300,angle:90,width:80,height:20},
-			{type:"villain", name:"virus2",x:450,y:300,calories:590},
-
-			{type:"hero", name:"hands",x:80,y:405},
-			{type:"hero", name:"vaccine",x:140,y:405},
-			{type:"hero", name:"mask",x:20,y:405},
-		
-		]
-	},
-	 
+	},	 
 	{   // Segundo nivel
 		foreground:'sueloR',
 		background:'emergencia',
