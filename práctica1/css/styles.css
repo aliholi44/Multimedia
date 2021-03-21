@@ -37,7 +37,8 @@
     margin: 20px;
     cursor: pointer;
     background: url("../images/icons/level.png") no-repeat;
-    color: yellow;
+    color: white;
+    font-weight: bold;
     font-size: 20px;
     width: 64px;
     height: 64px;
@@ -106,3 +107,22 @@
     text-shadow: 0 0 2px #000;
     color:white;
 }
+
+.boton_p_inicio {background-image: linear-gradient(to right, #ee9105 0%, #f8c27b  51%, #f7ce49  100%)}
+.boton_p_inicio {
+   padding: 12px 37px;
+   position: relative;
+   margin: 0 auto;
+   font-size: medium;
+   text-align: center;
+   font-weight: bold;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   border-radius: 10px;
+   border-color: white;
+   display: block;
+ }
+
+

@@ -395,7 +395,7 @@ var game = {
 var levels = {
 	// Datos de nivel
 	data:[
-	 {   // Primer nivel 
+	{   // Primer nivel 
 		foreground:'sueloR',
 		background:'emergencia',
 		entities:[
@@ -427,8 +427,7 @@ var levels = {
 			{type:"villain", name:"virus1", x:795,y:380,calories:420},
 
 			{type:"block", name:"washer", x:850,y:380,width:50,height:50},
-			{type:"villain", name:"virus1", x:850,y:380,calories:420},								
-			//{type:"villain", name:"virus1", x:620,y:205,calories:420},	
+			{type:"villain", name:"virus1", x:850,y:380,calories:420},									
 			
 			{type:"block", name:"glass", x:890,y:300,angle:90,width:80,height:20},
 			{type:"block", name:"glass", x:890,y:380,angle:90,width:80,height:20},	
@@ -439,33 +438,50 @@ var levels = {
 			{type:"hero", name:"vaccine",x:140,y:405},
 			{type:"hero", name:"mask",x:20,y:405},
 		]
-	 },
-		{   // Segundo nivel
-			foreground:'sueloR',
-			background:'emergencia',
-			entities:[
-				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
-				{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
-	
-				{type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"glass", x:670,y:317.5,width:100,height:25},
-				{type:"block", name:"glass", x:770,y:317.5,width:100,height:25},				
+	},
+	{
+		foreground:'sueloR',
+		background:'emergencia',
+		entities:[
+			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+			{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
 
-				{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
-				{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
+			{type:"block", name:"glass", x:450,y:300,angle:90,width:80,height:20},
+			{type:"villain", name:"virus2",x:450,y:300,calories:590},
 
-				{type:"villain", name:"burger",x:715,y:155,calories:590},
-				{type:"villain", name:"fries",x:670,y:405,calories:420},
-				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+			{type:"hero", name:"hands",x:80,y:405},
+			{type:"hero", name:"vaccine",x:140,y:405},
+			{type:"hero", name:"mask",x:20,y:405},
+		
+		]
+	},
+	 
+	{   // Segundo nivel
+		foreground:'sueloR',
+		background:'emergencia',
+		entities:[
+			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+			{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
+			
+			{type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
+			{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
+			{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
+			{type:"block", name:"glass", x:670,y:317.5,width:100,height:25},
+			{type:"block", name:"glass", x:770,y:317.5,width:100,height:25},				
 
-				{type:"hero", name:"strawberry",x:30,y:415},
-				{type:"hero", name:"orange",x:80,y:405},
-				{type:"hero", name:"apple",x:140,y:405},
-			]
-		}
+			{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
+			{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
+			{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
+
+			{type:"villain", name:"burger",x:715,y:155,calories:590},
+			{type:"villain", name:"fries",x:670,y:405,calories:420},
+			{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+
+			{type:"hero", name:"strawberry",x:30,y:415},
+			{type:"hero", name:"orange",x:80,y:405},
+			{type:"hero", name:"apple",x:140,y:405},
+		]
+	}
 	],
 
 	// Inicializar pantalla de selección de nivel
