@@ -107,8 +107,8 @@ var game = {
 	// Modo Juego 
 	mode:"intro", 
 	// Coordenadas X & Y de la honda
-	slingshotX:140,
-	slingshotY:280,
+	slingshotX:150,
+	slingshotY:295,
 	start:function(){
 		$('.gamelayer').hide();
 		// Display the game canvas and score 
@@ -394,7 +394,7 @@ var game = {
 
 var levels = {
 	// Datos de nivel
-	data:[
+	data:[ 
 	{   // Primer nivel 
 		foreground:'sueloR',
 		background:'emergencia',
@@ -438,7 +438,8 @@ var levels = {
 			{type:"hero", name:"vaccine",x:140,y:405},
 			{type:"hero", name:"mask",x:20,y:405},
 		]
-	},	 
+	},
+	
 	{   // Segundo nivel
 		foreground:'sueloR',
 		background:'emergencia',
@@ -608,6 +609,7 @@ var entities = {
 			friction:0.5,
 			restitution:0.4,	
 		},
+
 		"virus2":{
 			shape:"circle",
 			fullHealth:50,
