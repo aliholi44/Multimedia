@@ -358,7 +358,8 @@ var game = {
 				}
 			}
 		}
-		game.showEndingScreen;
+		game.ended = true;
+		game.showEndingScreen();
 
 	},
 	drawAllBodies: function () {
@@ -988,9 +989,6 @@ var loader = {
 		loader.loadedCount = 0;
 		loader.totalCount = 0;
 	},
-	resetLoadedCount() {
-		loader.loadedCount = 0;
-	}
 }
 
 var mouse = {
