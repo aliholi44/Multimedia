@@ -475,46 +475,28 @@ var levels = {
 			background: 'emergencia',
 			entities: [
 				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-				{ type: "ground", name: "wood", x: 185, y: 390, width: 10, height: 70, isStatic: true },
-
-				/* {type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
-				{type:"block", name:"glass", x:670,y:317.5,width:100,height:25},
-				{type:"block", name:"glass", x:770,y:317.5,width:100,height:25},				
-	
-				{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
-				{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
-				{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
-	*/
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
 
 				//blolcks
-				/* { type: "block", name: "wood", x: 720, y: 380, angle: 90, width: 100, height: 25 },
-				{ type: "block", name: "wood", x: 620, y: 380, angle: 90, width: 100, height: 25 },
-				{ type: "block", name: "tube", x: 670, y: 317.5, width: 100, height: 25 },
-				{ type: "block", name: "gel", x: 770, y: 317.5, width: 100, height: 25 },*/
 				{ type: "block", name: "iron", x: 350, y: 405, angle: 90, width: 200, height: 25 },
 				{ type: "block", name: "iron", x: 850, y: 405, angle: 90, width: 325, height: 25 },
 				{ type: "block", name: "wood", x: 570, y: 405, angle: 90, width: 200, height: 25 },
 				{ type: "block", name: "glass", x: 450, y: 405, angle: 75, width: 220, height: 25 },
 				{ type: "block", name: "glass", x: 460, y: 205, width: 250, height: 25 },
-				{ type: "block", name: "glass", x: 660, y: 115, width: 500, height: 25 },
-				{ type: "block", name: "wood", x: 565, y: 170, angle: 90, width: 100, height: 25 },
-
+				{ type: "block", name: "glass", x: 635, y: 115, width: 465, height: 25 },
+				{ type: "block", name: "wood", x: 558, y: 170, angle: 90, width: 100, height: 25 },
 				{ type: "block", name: "iron", x: 610, y: 405, angle: 90, width: 125, height: 25 },
 				{ type: "block", name: "iron", x: 810, y: 405, angle: 90, width: 125, height: 25 },
 				{ type: "block", name: "glass", x: 710, y: 275, width: 220, height: 25 },
 				{ type: "block", name: "atom", x: 710, y: 405, angle: 90, width: 50, height: 50 },
-				{ type: "block", name: "tube", x: 430, y: 170, width: 66, height: 100 },
+				{ type: "block", name: "tube", x: 430, y: 170, width: 66, height: 99 },
+
 				//villians
 				{ type: "villain", name: "virus2", x: 400, y: 405, calories: 590 },
 				{ type: "villain", name: "virus1", x: 710, y: 355, calories: 420 },
-				{ type: "villain", name: "virus3", x: 550, y: 170, calories: 600 },
+				{ type: "villain", name: "virus3", x: 540, y: 170, calories: 600 },
 
-				/*{ type: "villain", name: "virus3", x: 765, y: 400, calories: 150 },
-				{ type: "villain", name: "virus4", x: 715, y: 155, calories: 590 },
-				{ type: "villain", name: "virus5", x: 670, y: 405, calories: 420 }, */
-
+				//herous
 				{ type: "hero", name: "soap", x: 210, y: 405 },
 				{ type: "hero", name: "hands", x: 80, y: 405 },
 				{ type: "hero", name: "vaccine", x: 140, y: 405 },
@@ -588,7 +570,7 @@ var entities = {
 			restitution: 0.4,
 		},
 		"iron": {
-			fullHealth: 1800000,
+			fullHealth: 180000,
 			density: 10,
 			friction: 0.4,
 			restitution: 0.4,
@@ -597,7 +579,7 @@ var entities = {
 			density: 3.0,
 			friction: 1.5,
 			restitution: 0.2,
-		}, 
+		},
 		"tube": {
 			fullHealth: 50,
 			density: 0.7,
