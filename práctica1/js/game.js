@@ -42,7 +42,7 @@ $(window).load(function() {
 var game = {
 	// Inicialización de objetos, precarga de elementos y pantalla de inicio
 	init: function(){
-		// InicializaciÃ³n de objetos   
+		// Inicialización de objetos   
 		levels.init();
 		loader.init();
 		mouse.init();
@@ -73,7 +73,7 @@ var game = {
 		$('#gamestartscreen').show();
 
 		//Obtener el controlador para el lienzo de juego y el contexto
-		game.canvas = document.getElementById('gamecanvas');
+		game.canvas = $('#gamecanvas')[0];
 		game.context = game.canvas.getContext('2d');
 	},	  
 	startBackgroundMusic:function(){
@@ -98,17 +98,24 @@ var game = {
 		}
 	},
 	showLevelScreen:function(){
+		loader.resetCounts();
 		$('.gamelayer').hide();
 		$('#levelselectscreen').show('slow');
+	},
+	gameFinished:function(){
+		game.ended = true;
+		game.showLevelScreen();
 	},
 	restartLevel:function(){
 		window.cancelAnimationFrame(game.animationFrame);		
 		game.lastUpdateTime = undefined;
+		loader.resetCounts();
 		levels.load(game.currentLevel.number);
 	},
 	startNextLevel:function(){
 		window.cancelAnimationFrame(game.animationFrame);		
 		game.lastUpdateTime = undefined;
+		loader.resetCounts();
 		levels.load(game.currentLevel.number+1);
 	},
 	// Modo Juego 
@@ -351,6 +358,7 @@ var game = {
 				}
 			}
 		}
+		game.ended = true;
 		game.showEndingScreen;
 
 	},
@@ -555,6 +563,11 @@ var entities = {
 			friction:0.4,
 			restitution:0.4,
 		},
+		"dirt":{
+			density:3.0,
+			friction:1.5,
+			restitution:0.2,	
+		},
 		"chimney":{
 			fullHealth:150,
 			density:0.7,
@@ -591,44 +604,41 @@ var entities = {
 			friction:0.4,
 			restitution:0.4,
 		},
-		"dirt":{
-			density:3.0,
-			friction:1.5,
-			restitution:0.2,	
-		},
+		//Héroes
 		"vaccine":{
 			shape:"circle",
 			radius:20,
-			density:1.5,
+			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"hands":{
 			shape:"circle",
 			radius:20,
-			density:1.5,
+			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"mask":{
 			shape:"circle",
 			radius:20,
-			density:1.5,
+			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
 		},
 		"soap":{
 			shape:"circle",
 			radius:20,
-			density:1.5,
+			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
 		},
+		//Villanos
 		"virus1":{
 			shape:"circle",
 			fullHealth:40,
 			radius:15,
-			density:1.5,
+			density:2.0,
 			friction:0.5,
 			restitution:0.4,	
 		},
@@ -670,7 +680,6 @@ var entities = {
 	create:function(entity){
 		var definition = entities.definitions[entity.name];	
 		if(!definition){
-			console.log ("Undefined entity name",entity.name);
 			return;
 		}	
 		switch(entity.type){
@@ -705,7 +714,6 @@ var entities = {
 				}												 
 				break;							
 			default:
-				console.log("Undefined entity type",entity.type);
 				break;
 		}		
 	},
@@ -910,6 +918,13 @@ var loader = {
 				loader.onload = undefined;
 			}
 		}
+	},
+	resetCounts:function(){
+		loader.loadedCount = 0;
+		loader.totalCount = 0;
+	},
+	resetLoadedCount(){
+		loader.loadedCount = 0;
 	}
 }
 
