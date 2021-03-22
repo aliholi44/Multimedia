@@ -338,6 +338,22 @@ var game = {
 			game.animationFrame = window.requestAnimationFrame(game.animate,game.canvas);
 		}	
 	},
+	destroyAllBodies:function(){
+		game.heroes = [];
+		game.villains = [];
+		for (var body = box2d.world.GetBodyList(); body; body = body.GetNext()) {
+			var entity = body.GetUserData();
+			if(entity){
+				if (entity.type =="villain"){
+					box2d.world.DestroyBody(body);
+					game.score += entity.calories;
+					$('#score').html('Score: '+game.score);
+				}
+			}
+		}
+		game.showEndingScreen;
+
+	},
 	drawAllBodies:function(){  
 		box2d.world.DrawDebugData();	
 
@@ -596,7 +612,7 @@ var entities = {
 		},
 		"mask":{
 			shape:"circle",
-			radius:15,
+			radius:20,
 			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
