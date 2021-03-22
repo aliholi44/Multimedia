@@ -423,10 +423,56 @@ var game = {
 
 }
 
+
 var levels = {
 	// Datos de nivel
 	data: [
-		{   // Primer nivel
+		{   // Primer nivel 
+			foreground: 'sueloR',
+			background: 'emergencia',
+			entities:[
+			   {type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+				{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
+	
+				{type:"block", name:"wood", x:520,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
+				{type:"villain", name:"virus2",x:520,y:205,calories:590},
+	
+				{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
+				{type:"villain", name:"virus1", x:620,y:205,calories:420},				
+	
+				{type:"hero", name:"hands",x:80,y:405},
+				{type:"hero", name:"soap",x:140,y:405},
+			]
+		 },
+			{   // Segundo nivel
+				foreground: 'sueloR',
+				background: 'emergencia',
+				entities:[
+					{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+					{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
+		
+					{type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
+					{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
+					{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
+					{type:"block", name:"glass", x:670,y:317.5,width:100,height:25},
+					{type:"block", name:"glass", x:770,y:317.5,width:100,height:25},				
+	
+					{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
+					{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
+					{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
+	
+					{type:"villain", name:"virus1",x:715,y:155,calories:590},
+					{type:"villain", name:"virus2",x:670,y:405,calories:420},
+					{type:"villain", name:"virus3",x:765,y:400,calories:150},
+	
+					{type:"hero", name:"soap",x:30,y:415},
+					{type:"hero", name:"vacine",x:80,y:405},
+					{type:"hero", name:"hands",x:140,y:405},
+				]
+			},
+		{   // Tercer nivel
 			foreground: 'sueloR',
 			background: 'emergencia',
 			entities: [
@@ -455,7 +501,7 @@ var levels = {
 				{ type: "hero", name: "mask", x: 20, y: 405 },
 			]
 		},
-		{   // Segundo nivel 
+		{   // Cuarto nivel 
 			foreground: 'sueloR',
 			background: 'emergencia',
 			entities: [
@@ -500,7 +546,7 @@ var levels = {
 			]
 		},
 
-		{   // Tercer nivel
+		{   // Quinto nivel
 			foreground: 'sueloR',
 			background: 'emergencia',
 			entities: [
