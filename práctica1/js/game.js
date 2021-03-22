@@ -425,7 +425,36 @@ var game = {
 var levels = {
 	// Datos de nivel
 	data: [
-		{   // Primer nivel 
+		{   // Primer nivel
+			foreground: 'sueloR',
+			background: 'emergencia',
+			entities: [
+				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+
+				//blolcks
+				{ type: "block", name: "iron", x: 350, y: 405, angle: 90, width: 200, height: 50 },
+				{ type: "block", name: "iron", x: 500, y: 405, angle: 90, width: 200, height: 25 },
+				{ type: "block", name: "iron", x: 650, y: 405, angle: 90, width: 200, height: 25 },
+				{ type: "block", name: "iron", x: 800, y: 405, angle: 90, width: 200, height: 25 },
+				{ type: "block", name: "iron", x: 730, y: 400, width: 155, height: 25 },
+				{ type: "block", name: "glass", x: 750, y: 310, angle: 45, width: 200, height: 25 },
+				{ type: "block", name: "wood", x: 570, y: 330, angle: 45, width: 150, height: 25 },
+				{ type: "block", name: "wood", x: 430, y: 330, angle: 45, width: 150, height: 25 },
+				{ type: "block", name: "glass", x: 580, y: 200, width: 525, height: 25 },
+
+				
+				//villians
+				{ type: "villain", name: "virus2", x: 390, y: 405, calories: 590 },
+				{ type: "villain", name: "virus1", x: 540, y: 405, calories: 590 },
+				{ type: "villain", name: "virus3", x: 690, y: 380, calories: 590 },
+				//herous
+				{ type: "hero", name: "soap", x: 80, y: 405 },
+				{ type: "hero", name: "vaccine", x: 140, y: 405 },
+				{ type: "hero", name: "mask", x: 20, y: 405 },
+			]
+		},
+		{   // Segundo nivel 
 			foreground: 'sueloR',
 			background: 'emergencia',
 			entities: [
@@ -470,7 +499,7 @@ var levels = {
 			]
 		},
 
-		{   // Segundo nivel
+		{   // Tercer nivel
 			foreground: 'sueloR',
 			background: 'emergencia',
 			entities: [
