@@ -122,7 +122,7 @@ var game = {
 	mode: "intro",
 	// Coordenadas X & Y de la honda
 	slingshotX: 150,
-	slingshotY: 295,
+	slingshotY: 297,
 	start: function () {
 		$('.gamelayer').hide();
 		// Display the game canvas and score 
@@ -358,7 +358,6 @@ var game = {
 				}
 			}
 		}
-		game.ended = true;
 		game.showEndingScreen();
 
 	},
@@ -432,7 +431,7 @@ var levels = {
 			background: 'emergencia',
 			entities:[
 			   {type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
-				{type:"ground", name:"wood", x:185,y:390,width:20,height:80,isStatic:true},
+				{type:"ground", name:"wood", x:185,y:390,width:15,height:80,isStatic:true},
 	
 				{type:"block", name:"wood", x:520,y:380,angle:90,width:100,height:25},
 				{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
@@ -442,8 +441,8 @@ var levels = {
 				{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
 				{type:"villain", name:"virus1", x:620,y:205,calories:420},				
 	
-				{type:"hero", name:"hands",x:80,y:405},
-				{type:"hero", name:"soap",x:140,y:405},
+				{type:"hero", name:"soap",x:80,y:405},
+				{type:"hero", name:"gloves",x:140,y:405},
 			]
 		 },
 			{   // Segundo nivel
@@ -451,7 +450,7 @@ var levels = {
 				background: 'emergencia',
 				entities:[
 					{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
-					{type:"ground", name:"wood", x:185,y:390,width:20,height:80,isStatic:true},
+					{type:"ground", name:"wood", x:185,y:390,width:15,height:80,isStatic:true},
 		
 					{type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
 					{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
@@ -467,9 +466,9 @@ var levels = {
 					{type:"villain", name:"virus2",x:670,y:405,calories:420},
 					{type:"villain", name:"virus3",x:765,y:400,calories:150},
 	
-					{type:"hero", name:"soap",x:30,y:415},
-					{type:"hero", name:"vacine",x:80,y:405},
-					{type:"hero", name:"hands",x:140,y:405},
+					{type:"hero", name:"gloves",x:30,y:415},
+					{type:"hero", name:"vaccine",x:80,y:405},
+					{type:"hero", name:"soap",x:140,y:405},
 				]
 			},
 		{   // Tercer nivel
@@ -477,9 +476,9 @@ var levels = {
 			background: 'emergencia',
 			entities: [
 				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-				{ type: "ground", name: "wood", x: 185, y: 390, width: 20, height: 80, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 15, height: 80, isStatic: true },
 
-				//blocks
+				//Bloques
 				{ type: "block", name: "iron", x: 410, y: 405, angle: 90, width: 200, height: 50 },
 				{ type: "block", name: "iron", x: 560, y: 405, angle: 90, width: 200, height: 25 },
 				{ type: "block", name: "iron", x: 710, y: 405, angle: 90, width: 200, height: 25 },
@@ -491,13 +490,13 @@ var levels = {
 				{ type: "block", name: "glass", x: 640, y: 200, width: 525, height: 25 },
 
 				
-				//villains
+				//Villanos
 				{ type: "villain", name: "virus2", x: 450, y: 405, calories: 590 },
 				{ type: "villain", name: "virus1", x: 600, y: 405, calories: 590 },
 				{ type: "villain", name: "virus3", x: 750, y: 380, calories: 590 },
 
-				//heroes
-				{ type: "hero", name: "soap", x: 80, y: 405 },
+				//Héroes
+				{ type: "hero", name: "gloves", x: 80, y: 405 },
 				{ type: "hero", name: "vaccine", x: 140, y: 405 },
 				{ type: "hero", name: "mask", x: 20, y: 405 },
 			]
@@ -507,7 +506,7 @@ var levels = {
 			background: 'emergencia',
 			entities: [
 				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-				{ type: "ground", name: "wood", x: 185, y: 390, width: 20, height: 80, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 15, height: 80, isStatic: true },
 
 				{ type: "block", name: "glass", x: 450, y: 300, angle: 90, width: 80, height: 20 },
 				{ type: "block", name: "glass", x: 450, y: 380, angle: 90, width: 80, height: 20 },
@@ -541,7 +540,7 @@ var levels = {
 				{ type: "block", name: "glass", x: 890, y: 220, angle: 90, width: 80, height: 20 },
 				{ type: "villain", name: "virus2", x: 890, y: 160, calories: 590 },
 
-				{ type: "hero", name: "hands", x: 80, y: 405 },
+				{ type: "hero", name: "soap", x: 80, y: 405 },
 				{ type: "hero", name: "vaccine", x: 140, y: 405 },
 				{ type: "hero", name: "mask", x: 20, y: 405 },
 			]
@@ -552,9 +551,9 @@ var levels = {
 			background: 'emergencia',
 			entities: [
 				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-				{ type: "ground", name: "wood", x: 185, y: 390, width: 20, height: 80, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 15, height: 80, isStatic: true },
 
-				//blocks
+				//Bloques
 				{ type: "block", name: "iron", x: 350, y: 405, angle: 90, width: 200, height: 25 },
 				{ type: "block", name: "iron", x: 850, y: 405, angle: 90, width: 325, height: 25 },
 				{ type: "block", name: "wood", x: 570, y: 405, angle: 90, width: 200, height: 25 },
@@ -568,14 +567,14 @@ var levels = {
 				{ type: "block", name: "atom", x: 710, y: 405, angle: 90, width: 50, height: 50 },
 				{ type: "block", name: "tube", x: 430, y: 170, width: 66, height: 99 },
 
-				//villains
+				//Villanos
 				{ type: "villain", name: "virus2", x: 400, y: 405, calories: 590 },
 				{ type: "villain", name: "virus1", x: 710, y: 355, calories: 420 },
 				{ type: "villain", name: "virus3", x: 540, y: 170, calories: 600 },
 
-				//heroes
-				{ type: "hero", name: "soap", x: 210, y: 405 },
-				{ type: "hero", name: "hands", x: 80, y: 405 },
+				//Héroes
+				{ type: "hero", name: "gloves", x: 210, y: 405 },
+				{ type: "hero", name: "soap", x: 80, y: 405 },
 				{ type: "hero", name: "vaccine", x: 140, y: 405 },
 				{ type: "hero", name: "mask", x: 20, y: 405 },
 			]
@@ -699,20 +698,8 @@ var entities = {
 			friction: 0.4,
 			restitution: 0.4,
 		},
-		"gel": {
-			fullHealth: 200,
-			density: 0.7,
-			friction: 0.4,
-			restitution: 0.4,
-		},
 		"atom": {
 			fullHealth: 10000,
-			density: 0.7,
-			friction: 0.4,
-			restitution: 0.4,
-		},
-		"clean": {
-			fullHealth: 70,
 			density: 0.7,
 			friction: 0.4,
 			restitution: 0.4,
@@ -725,7 +712,7 @@ var entities = {
 			friction: 0.5,
 			restitution: 0.4,
 		},
-		"hands": {
+		"soap": {
 			shape: "circle",
 			radius: 20,
 			density: 2.0,
@@ -739,7 +726,7 @@ var entities = {
 			friction: 0.5,
 			restitution: 0.4,
 		},
-		"soap": {
+		"gloves": {
 			shape: "circle",
 			radius: 20,
 			density: 2.0,
