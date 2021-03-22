@@ -358,7 +358,6 @@ var game = {
 				}
 			}
 		}
-		game.ended = true;
 		game.showEndingScreen;
 
 	},
