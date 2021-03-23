@@ -98,25 +98,27 @@ var game = {
 		}
 	},
 	showLevelScreen: function () {
-		loader.resetCounts();
+		loader.resetLoad();
 		$('.gamelayer').hide();
 		$('#levelselectscreen').show('slow');
 	},
-	gameFinished: function () {
-		game.ended = true;
-		game.showLevelScreen();
-	},
 	restartLevel: function () {
+		game.stopBackgroundMusic();
 		window.cancelAnimationFrame(game.animationFrame);
 		game.lastUpdateTime = undefined;
-		loader.resetCounts();
+		loader.resetLoad();
 		levels.load(game.currentLevel.number);
 	},
 	startNextLevel: function () {
 		window.cancelAnimationFrame(game.animationFrame);
 		game.lastUpdateTime = undefined;
-		loader.resetCounts();
+		loader.resetLoad();
 		levels.load(game.currentLevel.number + 1);
+	},
+	showLevelScreenTop: function () {
+		game.ended = true;
+		game.stopBackgroundMusic();
+		game.showLevelScreen();
 	},
 	// Modo Juego 
 	mode: "intro",
@@ -1019,7 +1021,7 @@ var loader = {
 			}
 		}
 	},
-	resetCounts: function () {
+	resetLoad: function () {
 		loader.loadedCount = 0;
 		loader.totalCount = 0;
 	},
