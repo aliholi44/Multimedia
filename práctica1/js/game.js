@@ -49,8 +49,6 @@ var game = {
 
 		// Cargar todos los efectos de sonido y música de fondo
 
-		//"Kindergarten" by Gurdonark
-		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
 		game.backgroundMusic = loader.loadSound('audio/musicaPrincipal');
 
 		game.slingshotReleasedSound = loader.loadSound("audio/slingshotEffect");
