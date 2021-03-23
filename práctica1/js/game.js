@@ -519,7 +519,7 @@ var levels = {
 				{ type: "villain", name: "virus3", x: 510, y: 380, calories: 420 },
 
 				{ type: "block", name: "chimney", x: 580, y: 380, width: 60, height: 30 },
-				{ type: "villain", name: "virus1", x: 580, y: 380, calories: 420 },
+				{ type: "villain", name: "virus4", x: 580, y: 380, calories: 420 },
 
 				{ type: "block", name: "wardrobe", x: 650, y: 380, width: 60, height: 40 },
 				{ type: "block", name: "wardrobe", x: 650, y: 380, width: 60, height: 40 },
@@ -533,7 +533,7 @@ var levels = {
 				{ type: "villain", name: "virus1", x: 795, y: 380, calories: 420 },
 
 				{ type: "block", name: "washer", x: 850, y: 380, width: 50, height: 50 },
-				{ type: "villain", name: "virus1", x: 850, y: 380, calories: 420 },
+				{ type: "villain", name: "virus5", x: 850, y: 380, calories: 420 },
 
 				{ type: "block", name: "glass", x: 890, y: 300, angle: 90, width: 80, height: 20 },
 				{ type: "block", name: "glass", x: 890, y: 380, angle: 90, width: 80, height: 20 },
