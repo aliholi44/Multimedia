@@ -346,8 +346,8 @@ var game = {
 		}
 	},
 	destroyAllBodies: function () {
-		game.heroes = [];
-		game.villains = [];
+		game.mode = "level-success";
+		game.ended = true;
 		for (var body = box2d.world.GetBodyList(); body; body = body.GetNext()) {
 			var entity = body.GetUserData();
 			if (entity) {
